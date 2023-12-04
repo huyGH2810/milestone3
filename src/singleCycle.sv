@@ -3,7 +3,7 @@ module singleCycle
 	input 			clk_i ,
 	input 			rst_ni,
 	input  [16:0]	io_sw_i  ,
-	output [31:0]	instID, instEX, instMEM, //instWB,
+	output [31:0]	testinstIF, testinstID, testinstEX, testinstMEM, //instWB,
 	output [31:0]	io_lcd_o ,
 	output [7:0]	io_ledg_o,
 	output [16:0]	io_ledr_o,
@@ -11,7 +11,13 @@ module singleCycle
 );
 
 logic [10:0] csID, csEX, csMEM, csWB;
-logic [31:0] instIF;
+logic [31:0] instIF, instID, instEX, instMEM;
+
+assign testinstIF = instIF;
+assign testinstID = instID;
+assign testinstEX = instEX;
+assign testinstMEM = instMEM;
+
 assign csID  = {instIF [30], instIF [14:12], instIF [6:2], BrEq, BrLT};
 assign csEX  = {instID [30], instID [14:12], instID [6:2], BrEq, BrLT};
 assign csMEM = {instEX [30], instEX [14:12], instEX [6:2], BrEq, BrLT};

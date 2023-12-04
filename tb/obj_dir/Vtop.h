@@ -39,9 +39,10 @@ class Vtop VL_NOT_FINAL {
     VL_OUT(&io_hex5_o,31,0);
     VL_OUT(&io_hex6_o,31,0);
     VL_OUT(&io_hex7_o,31,0);
-    VL_OUT(&instID,31,0);
-    VL_OUT(&instEX,31,0);
-    VL_OUT(&instMEM,31,0);
+    VL_OUT(&testinstIF,31,0);
+    VL_OUT(&testinstID,31,0);
+    VL_OUT(&testinstEX,31,0);
+    VL_OUT(&testinstMEM,31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

@@ -106,10 +106,14 @@ VL_MODULE(Vtop___024root) {
         VL_OUT(io_hex5_o,31,0);
         VL_OUT(io_hex6_o,31,0);
         VL_OUT(io_hex7_o,31,0);
-        VL_OUT(instID,31,0);
-        VL_OUT(instEX,31,0);
-        VL_OUT(instMEM,31,0);
+        VL_OUT(testinstIF,31,0);
+        VL_OUT(testinstID,31,0);
+        VL_OUT(testinstEX,31,0);
+        VL_OUT(testinstMEM,31,0);
         IData/*31:0*/ top__DOT__singleCycle__DOT__instIF;
+        IData/*31:0*/ top__DOT__singleCycle__DOT__instID;
+        IData/*31:0*/ top__DOT__singleCycle__DOT__instEX;
+        IData/*31:0*/ top__DOT__singleCycle__DOT__instMEM;
         IData/*31:0*/ top__DOT__singleCycle__DOT__pcIF;
         IData/*31:0*/ top__DOT__singleCycle__DOT__pcID;
         IData/*31:0*/ top__DOT__singleCycle__DOT__RegReadData1;
@@ -140,12 +144,12 @@ VL_MODULE(Vtop___024root) {
         IData/*31:0*/ top__DOT__singleCycle__DOT__EX_DUT__DOT__brcomp__DOT__compare__DOT__index;
         IData/*31:0*/ top__DOT__singleCycle__DOT__EX_DUT__DOT__brcomp__DOT__compare_sign__DOT__index;
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__st_data_res;
+    };
+    struct {
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__st_data_out;
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__st_data_dmem;
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__ld_data_out;
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__INPUT__DOT__ram;
-    };
-    struct {
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__OUTPUT__DOT__i;
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__LSU__DOT__DMEM__DOT__i;
         IData/*31:0*/ top__DOT__singleCycle__DOT__MEM_DUT__DOT__DMEM_DUT__DOT__STORE__DOT__data;

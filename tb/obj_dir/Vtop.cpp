@@ -24,9 +24,10 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , io_hex5_o{vlSymsp->TOP.io_hex5_o}
     , io_hex6_o{vlSymsp->TOP.io_hex6_o}
     , io_hex7_o{vlSymsp->TOP.io_hex7_o}
-    , instID{vlSymsp->TOP.instID}
-    , instEX{vlSymsp->TOP.instEX}
-    , instMEM{vlSymsp->TOP.instMEM}
+    , testinstIF{vlSymsp->TOP.testinstIF}
+    , testinstID{vlSymsp->TOP.testinstID}
+    , testinstEX{vlSymsp->TOP.testinstEX}
+    , testinstMEM{vlSymsp->TOP.testinstMEM}
     , rootp{&(vlSymsp->TOP)}
 {
 }

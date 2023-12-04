@@ -14,10 +14,10 @@ module top
   output logic [31:0]      io_hex5_o ,
   output logic [31:0]      io_hex6_o ,
   output logic [31:0]      io_hex7_o ,
-  
-  output logic [31:0]      instID,
-  output logic [31:0] 	   instEX,
-  output logic [31:0]	   instMEM,
+  output logic [31:0]	   testinstIF,
+  output logic [31:0]      testinstID,
+  output logic [31:0] 	   testinstEX,
+  output logic [31:0]	   testinstMEM,
  // output logic [31:0]      instWB,
 
   // Clock and asynchronous reset active low
@@ -69,9 +69,10 @@ assign io_hex7_o = {25'h0, hex7};
     .io_hex5_o (hex5),
     .io_hex6_o (hex6),
     .io_hex7_o (hex7),
-    .instID	   (instID),
-    .instEX    (instEX),
-    .instMEM   (instMEM),
+    .testinstIF	   (testinstIF),
+    .testinstID	   (testinstID),
+    .testinstEX    (testinstEX),
+    .testinstMEM   (testinstMEM),
  //   .instWB    (instWB),
     .clk_i     (clk_i     ),
     .rst_ni    (rst_ni    )
